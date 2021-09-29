@@ -38,9 +38,43 @@ public class Sumador {
         return r;
     }
     
+    public static boolean mul3(int n) {
+        boolean r = false;
+        
+        if (n % 3 == 0) {
+            r = true;
+        }
+        
+        return r;
+    }
+    
+    public static boolean mul5(int n) {
+        boolean r = false;
+        
+        if (n % 5 == 0) {
+            r = true;
+        }
+        
+        return r;
+    }
+    
+    public static void FizzBuzz (int n) {
+        for (int k = 1; k <= n; k++) {
+            if (mul3(k) && mul5(k)) {
+                System.out.println("FIZZBUZZ");
+            } else if (mul3(k)) {
+                System.out.println("FIZZ");
+            } else if (mul5(k)) {
+                System.out.println("BUZZ");
+            } else {
+                System.out.println(k);
+            }
+        }
+    }
+    
     public static void main (String args []) {
         Scanner sc = new Scanner (System.in);
         int s = sc.nextInt();
-        System.out.println(sumarNPares(s));
+        FizzBuzz(s);
     }
 }

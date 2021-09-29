@@ -41,6 +41,8 @@ public class SumadorTest {
     public void testSumarN () {
         assertEquals(Sumador.sumarN(5), 15);
     }
+    
+
 
 
 }
