@@ -17,7 +17,7 @@ public class Main {
         int s = sc.nextInt();
         for (int k = 1; k <= s; k++) {
             DecToRoman romano = new DecToRoman (k);
-            System.out.println(k + " . " + romano.toString());  
+            System.out.println(k + ". " + romano.toString());  
         }
 
     }
