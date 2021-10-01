@@ -72,9 +72,40 @@ public class Sumador {
         }
     }
     
+    public static boolean esPrimo (int x) {
+        boolean r = true;
+        
+        if (x < 2 || x % 2 == 0 && x != 2) {
+            r = false;
+        }
+        
+        if (x > 2) {
+            for (int k = 3; k < x; k+=2){
+                if (x % k == 0) {
+                    r = false;
+                }
+            }
+        }
+        
+        return r;
+    }
+    
+    public static int sumarNPrimos (int x) {
+        int r = 0;
+        
+        for (int k = 1; k <= x; k++) {
+            if (esPrimo(k)) {
+                r += k;
+            }
+        }
+        
+        return r;
+        
+    }
+    
     public static void main (String args []) {
         Scanner sc = new Scanner (System.in);
         int s = sc.nextInt();
-        FizzBuzz(s);
+        System.out.println(sumarNPrimos(s));
     }
 }
